@@ -1,0 +1,134 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "back": "Back"
+    },
+    "ctas": {
+      "close": "Close",
+      "cancel": "Cancel",
+      "verify": "Verify",
+      "add": "Add {object}",
+      "edit": "Edit {object}",
+      "delete": "Delete {object}",
+      "copy": "Copier"
+    },
+    "confirm": {
+      "question": "Are you sure you want to {action} ?",
+      "noundo": "This action cannot be undone.",
+      "delete": "@:common.confirm.question @.lower:common.ctas.delete ? @:common.confirm.noundo"
+    }
+  },
+
+  "auth": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "logging_out": "Logging out",
+    "logging_out_dots": "Logging out...",
+    "ctas": {
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "login_success": "Logged in successfully !",
+    "logout_success": "Logged out successfully !"
+  },
+
+  "mfa": {
+    "code_verification": "Confirmation code",
+    "instructions": "We sent a {digits}-digits code to your email address.",
+    "confirmation_code": "Confirmation code",
+    "ctas": {
+      "resend_code": "Resend code"
+    },
+    "code_resent": "A new code has been sent to '{email}'"
+  },
+
+  "menu": {
+    "dashboard": "Tableau de bord",
+    "test": "Test",
+    "settings": "Réglages"
+  },
+
+  "connectors": {
+    "title": "No connector | Connector | Connectors",
+    "count": "0 connector | un connector | {n} connectors",
+    "article": "a connector | connectors",
+    "fields": {
+      "category": "Category",
+      "name": "Name",
+      "description": "Description",
+      "logoURL": "Logo URL",
+      "helpURL": "Help URL",
+      "authType": "Authentication type",
+      "authProvider": "Authentication provider",
+      "authScopes": "Scopes",
+      "route": "Connector route URL",
+      "secrets": "Connector secrets"
+    },
+    "categories": {
+      "ecommerce": "E-commerce",
+      "analytics": "Analytics",
+      "administrative": "Administrative",
+      "financial": "Financial",
+      "seo": "SEO",
+      "tech": "Technical",
+      "other": "Other"
+    },
+    "secrets": {
+      "title": "No secret | Connector secret | Connector secrets",
+      "fields": {
+        "title": "Secret",
+        "name": "Name",
+        "value": "Value"
+      }
+    },
+    "parameters": {
+      "title": "No parameter | connector parameter | connector parameters",
+      "fields": {
+        "title": "Required connector parameters",
+        "name": "Name",
+        "description": "Description"
+      }
+    },
+    "ctas": {
+      "add": "@:common.ctas.add a @.lower:connectors.title",
+      "edit": "@common.ctas.edit @.lower:connectors.title",
+      "delete": "@common.ctas.delete @.lower:connectors.title"
+    },
+    "confirm": {
+      "delete": "@:common.confirm.question delete this @.lower:connectors.title ? @:common.confirm.noundo"
+    }
+  },
+
+  "apiAccounts": {
+    "title": "No API account | API account | API accounts",
+    "count": "0 API account| one API account | {n} API accounts",
+    "article": "an API account | API accounts",
+    "fields": {
+      "name": "Name",
+      "key": "API Key",
+      "authorizedRoutes": "Authorized routes",
+      "expirationDate": "Expiration date"
+    },
+    "hints": {
+      "authorizedRoutes": "Endpoints starting after /api/v1 and replace IDs with double-stars **"
+    },
+    "ctas": {
+      "add": "@:common.ctas.add an @:apiAccounts.title",
+      "edit": "@:common.ctas.edit @:apiAccounts.title",
+      "delete": "@:common.ctas.delete @:apiAccounts.title",
+      "regenerate": "Re-generate",
+      "copy": "@:common.ctas.copy @:apiAccounts.fields.key"
+    },
+    "confirm": {
+      "regenerate": "Are you sure you want to regenerate the key for this @:apiAccounts.title ? This may break some clients that are using the current key.",
+      "delete": "@:common.confirm.question delete this @:apiAccounts.title ? @:common.confirm.noundo"
+    },
+    "errors": {
+      "copy_key": "Error copying @:apiAccounts.fields.key"
+    },
+    "key_regenerated": "A new API key has been successfully generated",
+    "key_copied": "@:apiAccounts.fields.key copied"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development nuxt dev",
+    "test": "vitest",
+    "build": "NODE_ENV=production nuxt build",
+    "generate": "NODE_ENV=production nuxt generate",
+    "preview": "NODE_ENV=production nuxt preview",
+    "start": "NODE_ENV=production node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.9",
+    "@heroicons/vue": "^2.0.15",
+    "@vee-validate/rules": "^4.7.4",
+    "@vee-validate/i18n": "^4.7.4",
+    "clipboard": "^2.0.11",
+    "date-fns": "^2.29.3",
+    "lodash": "^4.17.21",
+    "@pinia/nuxt": "^0.4.6",
+    "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
+    "secure-ls": "^1.2.6",
+    "vee-validate": "^4.7.4",
+    "vue-toastification": "next"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.8.2",
+    "@nuxtjs/google-fonts": "^3.0.0-0",
+    "@nuxtjs/tailwindcss": "^6.4.0",
+    "@nuxt/test-utils-edge": "^3.2.1-rc.0-27934134.7111b6c",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@types/webpack-env": "^1.18.0",
+    "@vueuse/core": "^9.12.0",
+    "@vueuse/nuxt": "^9.12.0",
+    "autoprefixer": "^10.4.13",
+    "nuxt": "^3.2.0",
+    "@pinia/nuxt": "^0.4.6",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",    
+    "tailwindcss": "^3.2.6",
+    "vitest": "^0.28.4",
+    "vue-i18n": "^9.2.2"    
+  }
+}

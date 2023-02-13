@@ -1,0 +1,134 @@
+{
+  "common": {
+    "nav": {
+      "home": "Accueil",
+      "back": "Retour"
+    },
+    "ctas": {
+      "close": "Fermer",
+      "cancel": "Annuler",
+      "verify": "Vérifier",
+      "add": "Ajouter {object}",
+      "edit": "Modifier {object}",
+      "delete": "Supprimer {object}",
+      "copy": "Copier"
+    },
+    "confirm": {
+      "question": "Êtes-vous sûr de vouloir",
+      "noundo": "Cette action ne peut pas être annulée.",
+      "delete": "@:common.confirm.question @.lower:common.ctas.delete ? @:common.confirm.noundo"
+    }
+  },
+
+  "auth": {
+    "login": "Connexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "logging_out": "Déconnexion",
+    "logging_out_dots": "Déconnexion...",
+    "ctas": {
+      "login": "Me connecter",
+      "logout": "Me déconnecter"
+    },
+    "login_success": "Connecté avec succès !",
+    "logout_success": "Déconnecté avec succès !"
+  },
+  
+  "mfa": {
+    "code_verification": "Vérification du code",
+    "instructions": "Nous avons envoyé un code de confirmation à {digits} chiffres sur votre adresse e-mail.",
+    "confirmation_code": "Code de confirmation",
+    "ctas": {
+      "resend_code": "Renvoyer le code"
+    },
+    "code_resent": "Un nouveau code a été envoyé à '{email}'"
+  },
+
+  "menu": {
+    "dashboard": "Tableau de bord",
+    "test": "Test",
+    "settings": "Réglages"
+  },
+
+  "connectors": {
+    "title": "Aucun connecteur | Connecteur | Connecteurs",
+    "count": "0 connecteur | un connecteur | {n} connecteurs",
+    "article": "un connecteur | des connecteurs",
+    "fields": {
+      "category": "Catégorie",
+      "name": "Nom",
+      "description": "Description",
+      "logoURL": "URL du logo",
+      "helpURL": "URL de la page d'aide",
+      "authType": "Type d'authentification",
+      "authProvider": "Fournisseur d'authentification",
+      "authScopes": "Scopes",
+      "route": "URL du connecteur",
+      "secrets": "Secrets du connecteur"
+    },
+    "categories": {
+      "ecommerce": "E-commerce",
+      "analytics": "Analytics",
+      "administrative": "Administratif",
+      "financial": "Financier",
+      "seo": "Référencement",
+      "tech": "Technique",
+      "other": "Autres"
+    },
+    "secrets": {
+      "title": "Aucun secret | Secret du connecteur | Secrets du connecteur",
+      "fields": {
+        "title": "Secrets du connecteur",
+        "name": "Nom",
+        "value": "Valeur"
+      }
+    },
+    "parameters": {
+      "title": "Aucun paramètre | Paramètre du connecteur | Paramètres du connecteur",
+      "fields": {
+        "title": "Paramètres requis pour le connecteur",
+        "name": "Nom",
+        "description": "Description"
+      }
+    },
+    "ctas": {
+      "add": "@:common.ctas.add un @.lower:connectors.title",
+      "edit": "@:common.ctas.edit le @.lower:connectors.title",
+      "delete": "@:common.ctas.delete le @.lower:connectors.title"
+    },
+    "confirm": {
+      "delete": "@:common.confirm.question supprimer ce @.lower:connectors.title ? @:common.confirm.noundo"
+    }
+  },
+
+  "apiAccounts": {
+    "title": "Aucun compte d'API | Compte d'API | Comptes d'API",
+    "count": "0 compte d'API | un compte d'API | {n} comptes d'API",
+    "article": "un compte d'API | des comptes d'API",
+    "fields": {
+      "name": "Nom",
+      "key": "Clé d'API",
+      "authorizedRoutes": "Routes autorisées",
+      "expirationDate": "Date d'expiration"
+    },
+    "hints": {
+      "authorizedRoutes": "Endpoints commençants après /api/v1 et remplacez les IDs par des double-astériques **"
+    },
+    "ctas": {
+      "add": "@:common.ctas.add un @:apiAccounts.title",
+      "edit": "@:common.ctas.edit @:apiAccounts.title",
+      "delete": "@:common.ctas.delete @:apiAccounts.title",
+      "regenerate": "Re-générer",
+      "copy": "@:common.ctas.copy @:apiAccounts.fields.key"
+    },
+    "confirm": {
+      "regenerate": "Etes-vous sûr de vouloir re-générer la clé pour ce compte d'API ? Cela peut empêcher de fonctionner les clients qui utilisent la clé actuelle.",
+      "delete": "@:common.confirm.question supprimer ce @:apiAccounts.title ? @:common.confirm.noundo"
+    },
+    "errors": {
+      "copy_key": "Erreur de la copie de la @:apiAccounts.fields.key"
+    },
+    "key_regenerated": "Une nouvelle clé d'API a été générée avec succès",
+    "key_copied": "@:apiAccounts.fields.key copiée"
+  }
+}

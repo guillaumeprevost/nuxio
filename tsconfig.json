@@ -1,0 +1,17 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@pinia/nuxt",
+      "webpack-env"
+    ],
+  },  
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
+}
