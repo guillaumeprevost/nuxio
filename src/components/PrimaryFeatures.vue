@@ -92,7 +92,7 @@ const features = [
     image: '/screenshots/mockup-friendtheory.png',
   },
   {
-    title: 'Solutions techniques',
+    title: 'APIs',
     description: 'Développement de solutions full-stack : nous concevons votre solutions dans son ensemble, conception, modèle de données, APIs, intégrations, etc.',
     image: '/screenshots/mockup-storybee-saas-msg.png',
   },

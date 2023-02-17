@@ -13,7 +13,7 @@
         </p>
       </div>
 
-      <!-- <div class="lg:hidden flex flex-col gap-y-10 overflow-hidden -mx-4 mt-20 sm:-mx-6 px-4 sm:px-6">
+      <div class="lg:hidden flex flex-col gap-y-10 overflow-hidden -mx-4 mt-20 sm:-mx-6 px-4 sm:px-6">
         <div v-for="feature, featureIndex in features" :key=feature.name>
           <Feature :feature="feature" class="mx-auto max-w-2xl" :isActive="featureIndex === selectedIndex" />
           <div class="relative mt-10 pb-10">
@@ -50,7 +50,7 @@
             </TabPanel>
           </div>
         </TabPanels>
-      </TabGroup> -->
+      </TabGroup>
     </Container>
   </section>
 
@@ -66,25 +66,25 @@ function changeTab(index) {
 
 const features = [
   {
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
-    description: 'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+    name: 'Création',
+    summary: 'Lancez rapidement des produits digitaux ambitieux et de qualité',
+    description: 'Nous concevons avec vous des applications de qualité, performantes, évolutives et sur-mesure. Nous faisons les choix techniques les mieux adaptés à vos enjeux et en s\'adaptant à votre organisation.',
     image: '/screenshots/mockup-friendtheory.png',
-    icon: resolveComponent('IconsReporting'),
+    icon: resolveComponent('IconsContact'),
   },
   {
-    name: 'Inventory',
-    summary: 'Never lose track of what’s in stock with accurate inventory tracking.',
-    description: 'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
-    image: '/screenshots/mockup-friendtheory.png',
+    name: 'Evolutions',
+    summary: 'Restez toujours à la pointe en modernisant votre application',
+    description: 'En plus de la maintenance évolutive et corrective, nous effectuons des migrations de site, modernisation et refontes d\'applications (refactoring).',
+    image: '/screenshots/mockup-storybee-saas-dataroom.png',
     icon: resolveComponent('IconsInventory')
   },
   {
-    name: 'Contacts',
-    summary: 'Organize all of your contacts, service providers, and invoices in one place.',
-    description: 'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    image: '/screenshots/mockup-friendtheory.png',
-    icon: resolveComponent('IconsContact')
+    name: 'Accompagnement & conseil',
+    summary: 'Assurez le succès de votre projet après son lancement',
+    description: 'Nous vous accompagnons dans la mise en place d\'une stratégie gagnante : analyse des données, des performances, du référencement, une veille de sécurité, leviers de croissance.',
+    image: '/screenshots/mockup-locationvelos.png',
+    icon: resolveComponent('IconsReporting'),
   },
 ]
 </script>
