@@ -33,7 +33,7 @@
                   <div class="overflow-hidden rounded-full bg-slate-50">
                     <a :href="testimonial.author.link" target="_blank">
                       <nuxt-img format="webp" quality="80" 
-                        :src="testimonial.author.image"
+                        :src="testimonial.author.image" :alt="`Client Nuxio ${testimonial.author.name}`"
                         sizes="xs:112px sm:112px md:112px lg:112px xl:112px"
                         class="h-14 w-14 object-cover" />
                     </a>

@@ -2,11 +2,11 @@
   <footer class="bg-slate-50">
     <Container>
       <div class="py-16">
-        <Logo class="mx-auto h-10 w-auto" />
+        <Logo class="mx-auto h-10 w-auto" alt="Logo Agence Nuxio" />
         <nav class="mt-10 text-sm" aria-label="quick links">
           <div class="-my-1 flex justify-center gap-x-6">
             <MenusNavLink :href="'#services'">Services</MenusNavLink>
-            <MenusNavLink :href="'#realisation'">Réalisations</MenusNavLink>
+            <!-- <MenusNavLink :href="'#realisation'">Réalisations</MenusNavLink> -->
             <MenusNavLink :href="'#temoignages'">Témoignages</MenusNavLink>
           </div>
         </nav>

@@ -99,6 +99,7 @@ export default defineNuxtConfig({
     head: {
       title: metaTitle,
       htmlAttrs: {
+        lang: "fr",
         class: "h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
       },
       meta: [

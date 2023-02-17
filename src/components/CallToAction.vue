@@ -2,7 +2,7 @@
   <section id="get-started-today" class="relative overflow-hidden bg-blue-600 py-32">
     
     <nuxt-img format="webp" quality="80" src="/backgrounds/background-call-to-action.jpg"
-      width="4694" height="2488"
+      width="4694" height="2488" alt="" role="presentation"
       sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
       class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" />
     

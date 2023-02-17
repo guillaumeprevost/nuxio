@@ -4,7 +4,7 @@
     class="relative overflow-hidden bg-slate-50 py-20 sm:py-32">
 
     <nuxt-img format="webp" quality="80" src="/backgrounds/background-faqs.jpg"
-      width="3116" height="1892"
+      width="3116" height="1892" alt="" role="presentation"
       sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
       class="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4" />
 

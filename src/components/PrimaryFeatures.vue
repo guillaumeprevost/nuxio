@@ -3,7 +3,7 @@
     class="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32">
     
     <nuxt-img format="webp" quality="80" src="/backgrounds/background-features.jpg"
-      width="4490" height="3272"
+      width="4490" height="3272" alt="" role="presentation"
       sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
       class="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" />
 
@@ -23,25 +23,25 @@
         <div class="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
           <TabList class="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
 
-            <div v-for="feature, featureIndex in features" :key="feature.title"
+            <Tab v-for="feature, featureIndex in features" :key="feature.title"
               class="group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6"
               :class="selectedIndex === featureIndex 
                 ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
                 : 'hover:bg-white/10 lg:hover:bg-white/5'">
-                <h3>
-                  <Tab class="font-display text-lg [&:not(:focus-visible)]:focus:outline-0"
+                <div>
+                  <h3 class="font-display text-lg [&:not(:focus-visible)]:focus:outline-0"
                     :class="selectedIndex === featureIndex
                       ? 'text-blue-600 lg:text-white'
                       : 'text-blue-100 hover:text-white lg:text-white'">
                     <span class="absolute inset-0 rounded-full lg:rounded-r-none lg:rounded-l-xl" />
                     {{ feature.title }}
-                  </Tab>
-                </h3>
+                  </h3>
+                </div>
                 <p class="mt-2 hidden text-sm lg:block"
                   :class="selectedIndex === featureIndex ? 'text-white' : 'text-blue-100 group-hover:text-white'">
                   {{ feature.description }}
                 </p>
-            </div>            
+              </Tab>            
           </TabList>
         </div>
         <TabPanels class="lg:col-span-7">
