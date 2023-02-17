@@ -47,9 +47,9 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
   ],
 
-  image: {
-    dir: 'public/images'
-  },
+  // image: {
+  //   dir: 'public/images'
+  // },
 
   build: {
     postcss: {
