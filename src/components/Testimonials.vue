@@ -32,8 +32,10 @@
                   </div>
                   <div class="overflow-hidden rounded-full bg-slate-50">
                     <a :href="testimonial.author.link" target="_blank">
-                      <img :src="testimonial.author.image" alt=""
-                        width="56" height="56" class="h-14 w-14 object-cover" />
+                      <nuxt-img format="webp" quality="80" 
+                        :src="testimonial.author.image"
+                        sizes="xs:112px sm:112px md:112px lg:112px xl:112px"
+                        class="h-14 w-14 object-cover" />
                     </a>
                   </div>
                 </figcaption>
@@ -47,12 +49,6 @@
 </template>
 
 <script setup>
-import photoMarielaure from '@/assets/images/avatars/marielaure.jpg'
-import photoMaxime from '@/assets/images/avatars/maxime.jpg'
-import photoAugustin from '@/assets/images/avatars/augustin.jpg'
-import photoGuillermo from '@/assets/images/avatars/guillermo.jpg'
-import photoCarlo from '@/assets/images/avatars/carlo.jpg'
-
 const testimonials = [
   [
     {
@@ -60,7 +56,7 @@ const testimonials = [
       author: {
         name: 'Maxime Colange',
         role: 'Fondateur & CEO, Fairily',
-        image: photoMaxime,
+        image: '/avatars/maxime.jpg',
         link: "https://www.linkedin.com/in/maxime-colange-42a47112a/"
       },
     },
@@ -69,7 +65,7 @@ const testimonials = [
       author: {
         name: 'Marie-Laure Blasquez',
         role: 'Directrice, Storybee',
-        image: photoMarielaure,
+        image: '/avatars/marielaure.jpg',
         link: "https://www.linkedin.com/in/marielaure-blasquez/"
       },
     },
@@ -80,7 +76,7 @@ const testimonials = [
       author: {
         name: 'Augustin Haran',
         role: 'Lixu Design',
-        image: photoAugustin,
+        image: '/avatars/augustin.jpg',
         link: "https://www.linkedin.com/in/augustinharan/"
       },
     },
@@ -91,7 +87,7 @@ const testimonials = [
       author: {
         name: 'Carlo Spada',
         role: 'CEO & co-fondateur, Nido',
-        image: photoCarlo,
+        image: '/avatars/carlo.jpg',
         link: "https://www.linkedin.com/in/carlospada/"
       },
     },
@@ -100,7 +96,7 @@ const testimonials = [
       author: {
         name: 'Guillermo Fernandez',
         role: 'Développeur senior, startup SaaS',
-        image: photoGuillermo,
+        image: '/avatars/guillermo.jpg',
         link: "https://www.linkedin.com/in/guillermo-fernandez-gorostidi/",
       },
     },

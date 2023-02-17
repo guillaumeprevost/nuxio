@@ -29,7 +29,10 @@
           <li v-for="(group, groupIndex) in clients" :key="groupIndex">
             <ul role="list" class="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
               <li v-for="(company) in group" :key="company.name" class="flex">
-                <img :src=company.logo :alt="company.name" width="147" height="48" loading="lazy" />
+                <nuxt-img format="webp" quality="80" 
+                  :src="company.logo" fit="inside" :alt="`Client Nuxio ${company.name}`" 
+                  sizes="sm:50vw md:50vw lg:500px"
+                  class="w-40" />
               </li>
             </ul>
           </li>
@@ -39,25 +42,17 @@
 </template>
 
 <script setup>
-import logoBeMyApp from '@/assets/images/clients/bemyapp.webp'
-import logoFriendTheory from '@/assets/images/clients/friendtheory.webp'
-import logoFairily from '@/assets/images/clients/fairily.webp'
-import logoEpitech from '@/assets/images/clients/epitech.webp'
-import logoStorybee from '@/assets/images/clients/storybee.webp'
-import logoLidem from '@/assets/images/clients/lidem.webp'
-import logoNido from '@/assets/images/clients/nido.webp'
-
 const clients = [
   [
-    { name: 'BeMyApp', logo: logoBeMyApp },
-    { name: 'Friend Theory', logo: logoFriendTheory },
-    { name: 'Fairily', logo: logoFairily },
+    { name: 'BeMyApp', logo: '/clients/bemyapp.webp' },
+    { name: 'Friend Theory', logo: '/clients/friendtheory.webp' },
+    { name: 'Fairily', logo: '/clients/fairily.webp' },
   ],
   [
-    { name: 'Epitech', logo: logoEpitech },
-    { name: 'Storybee', logo: logoStorybee },
-    { name: 'L\'idem', logo: logoLidem },
-    { name: 'Nido', logo: logoNido },
+    { name: 'Epitech', logo: '/clients/epitech.webp' },
+    { name: 'Storybee', logo: '/clients/storybee.webp' },
+    { name: 'L\'idem', logo: '/clients/lidem.webp' },
+    { name: 'Nido', logo: '/clients/nido.webp' },
   ],
 ];
 </script>

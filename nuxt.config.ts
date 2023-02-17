@@ -3,6 +3,9 @@ import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'url'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
+const metaTitle = 'Agence de dev Nuxio : votre site, e-commerce ou SaaS sur-mesure';
+const metaDescription = 'Agence de développement Nuxio : céation de sites web, e-commerce, SaaS sur-mesure, conception MVP, audit et refontes de sites'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'src',
@@ -38,10 +41,15 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
   ],
+
+  image: {
+    dir: 'assets/images'
+  },
 
   build: {
     postcss: {
@@ -55,13 +63,13 @@ export default defineNuxtConfig({
     transpile: ['@heroicons/vue', '@headlessui/vue'],
   },
 
-  runtimeConfig: {
-    public: {
-      apiBaseUrl: process.env.API_BASE_URL,
-      apiClientId: process.env.API_CLIENT_ID,
-      apiClientSecret: process.env.API_CLIENT_SECRET,
-    }
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     apiBaseUrl: process.env.API_BASE_URL,
+  //     apiClientId: process.env.API_CLIENT_ID,
+  //     apiClientSecret: process.env.API_CLIENT_SECRET,
+  //   }
+  // },
 
   vite: {
     plugins: [
@@ -87,18 +95,37 @@ export default defineNuxtConfig({
     'date-fns/locale$': require.resolve('./date-fns-locales.js'),
   },
 
-  meta: {
-    title: 'Agence de dev Nuxio : votre site, e-commerce ou SaaS sur-mesure',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxio web agency website' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    htmlAttrs: {
-      class: "h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
+  app: {
+    head: {
+      title: metaTitle,
+      htmlAttrs: {
+        class: "h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
+      },
+      meta: [
+        { name: 'charset', content: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: metaDescription },
+
+        { name: 'og:site_name', property: 'og:site_name', content: 'Agence Nuxio' },
+        { name: 'og:locale', property: 'og:locale', content: 'fr-FR' },
+        { name: 'og:type', property: 'og:type', content: 'website' },
+
+        { name: 'og:title', property: 'og:title', content: metaTitle },
+        { name: 'og:description', property: 'og:description', content: metaDescription },
+        { name: 'og:url', property: 'og:url', content: 'https://nuxio.dev' },
+        { name: 'og:image', property: 'og:image', content: 'https://nuxio.dev/images/agence-nuxio.jpg' },
+        { name: 'og:image:width', property: 'og:image:width', content: '1200' },
+        { name: 'og:image:height', property: 'og:image:height', content: '630' },
+
+        { name: 'twitter:card', property: 'twitter:card', content: 'summary' },
+        // { name: 'twitter:site', property: 'twitter:site', content: '' },
+        { name: 'twitter:title', property: 'twitter:title', content: metaTitle},
+        { name: 'twitter:description', property: 'twitter:description', content: metaDescription },
+        { name: 'twitter:url', property: 'twitter:url', content: 'https://nuxio.dev' },
+        { name: 'twitter:image', property: 'twitter:image',content: 'https://nuxio.dev/images/agence-nuxio.jpg' },
+        { name: 'twitter:image:width', property: 'twitter:image:width', content: '1200' },
+        { name: 'twitter:image:height', property: 'twitter:image:height', content: '630' },
+      ],
     }
   },
 })

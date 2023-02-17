@@ -1,6 +1,8 @@
 <template>
-    <img class="h-6 sm:h-8 w-auto max-w-max" fetchpriority="high"
-      src="~/assets/images/logo-nuxio.webp" />
+    <nuxt-img preload src="/logo-nuxio.webp" 
+      sizes="xs:100vw sm:100vw md:500px"
+      class="h-6 sm:h-8 w-auto max-w-max" 
+      fetchpriority="high" />
 </template>
 
 <script setup>

@@ -2,10 +2,11 @@
   <section id="services" aria-label="Features for running your books"
     class="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32">
     
-    <img :src="backgroundImage" 
-        alt="" loading="lazy" width="2245" height="1636" unoptimized 
-        class="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" />
-    
+    <nuxt-img format="webp" quality="80" src="/backgrounds/background-features.jpg"
+      width="4490" height="3272"
+      sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
+      class="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" />
+
     <Container class="relative">
       <div class="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
         <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -52,8 +53,10 @@
               </p>
             </div>
             <div class="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-              <img :src="feature.image" class="w-full" :alt="feature.title" priority 
-                sizes="md:100vw, 45rem lg:67.8125rem" />
+              <nuxt-img format="webp" quality="80" 
+                :src="feature.image" :alt="feature.title"
+                sizes="xs:640px md:1280px"
+                class="w-full" />
             </div>
           </TabPanel>
         </TabPanels>
@@ -64,11 +67,6 @@
 
 <script setup>
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
-import backgroundImage from '@/assets/images/background-features.jpg'
-import screenshotExpenses from '@/assets/images/screenshots/mockup-locationvelos.com.png'
-import screenshotPayroll from '@/assets/images/screenshots/mockupstorybee-saas-dataroom.png'
-import screenshotReporting from '@/assets/images/screenshots/friend-theory-app.png'
-import screenshotVatReturns from '@/assets/images/screenshots/mockup-storybee-saas-msg.png'
 
 const tabOrientation = 'vertical';
 const selectedIndex = ref(0);
@@ -81,24 +79,22 @@ const features = [
     title: 'E-commerce',
     description:
       "Développement de sites e-commerce performants, optimisés et sécurisés. Nous vous aidons à mettre en place un stratégie digitale gagnante .",
-    image: screenshotExpenses,
+    image: '/screenshots/mockup-locationvelos.png',
   },
   {
     title: 'SaaS',
     description: "Développement de SaaS et logiciels sur-mesure : faite coder le logiciel pour résoudre vos problèmes ou automatiser les solutions",
-      image: screenshotPayroll,
+    image: '/screenshots/mockup-storybee-saas-dataroom.png',
   },
   {
     title: 'Applications mobiles',
     description: "Développement d'application mobiles de la plus simple à la plus complexe",
-    image: screenshotReporting,
-    // image: '~/assets/images/screenshots/vat-returns.png',
+    image: '/screenshots/mockup-friendtheory.png',
   },
   {
     title: 'Solutions techniques',
     description: 'Développement de solutions full-stack : nous concevons votre solutions dans son ensemble, conception, modèle de données, APIs, intégrations, etc.',
-    image: screenshotVatReturns,
-    // image: '~/assets/images/screenshots/reporting.png',
+    image: '/screenshots/mockup-storybee-saas-msg.png',
   },
 ]
 

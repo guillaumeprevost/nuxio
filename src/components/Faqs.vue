@@ -2,8 +2,12 @@
 
   <section id="faq" aria-labelledby="faq-title" 
     class="relative overflow-hidden bg-slate-50 py-20 sm:py-32">
-    <img :src="backgroundImage" alt="" width="1558" height="946" unoptimized 
+
+    <nuxt-img format="webp" quality="80" src="/backgrounds/background-faqs.jpg"
+      width="3116" height="1892"
+      sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
       class="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4" />
+
     <Container class="relative">
       <div class="mx-auto max-w-2xl lg:mx-0">
         <h2 id="faq-title" class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
@@ -32,7 +36,7 @@
 </template>
 
 <script setup>
-import backgroundImage from '~/assets/images/background-faqs.jpg'
+// import backgroundImage from '~/assets/images/background-faqs.jpg'
 
 const faqs = [
   [

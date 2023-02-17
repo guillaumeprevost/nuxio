@@ -1,7 +1,9 @@
 <template>
   <section id="get-started-today" class="relative overflow-hidden bg-blue-600 py-32">
     
-    <img :src="backgroundImage" alt="" width="2347" height="1244" unoptimized 
+    <nuxt-img format="webp" quality="80" src="/backgrounds/background-call-to-action.jpg"
+      width="4694" height="2488"
+      sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
       class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" />
     
     <Container class="relative">
@@ -21,7 +23,6 @@
 </template>
 
 <script setup>
-import backgroundImage from '@/assets/images/background-call-to-action.jpg'
 </script>
 
 <style lang="sass">
