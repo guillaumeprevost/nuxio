@@ -27,14 +27,17 @@
       
       <TabGroup as="div" :selectedIndex="selectedIndex" @change="changeTab"
         class="hidden lg:block lg:mt-20">
-        <TabList class="grid grid-cols-3 gap-x-8">         
-          <Feature v-for="feature, featureIndex in features" :key="feature.name"
-            :feature="feature" :isActive="featureIndex === selectedIndex" class="relative">
-            <Tab class="[&:not(:focus-visible)]:focus:outline-none">
-              <span class="absolute inset-0"></span>
-              {{ feature.name }}
-            </Tab>
-          </Feature>
+        <TabList class="grid grid-cols-3 gap-x-8">     
+          <Tab v-for="feature, featureIndex in features" :key="feature.name" 
+            class="[&:not(:focus-visible)] :focus:outline-none">    
+            <Feature :feature="feature" :isActive="featureIndex === selectedIndex" 
+              class="relative text-left">
+              <button class="[&:not(:focus-visible)]:focus:outline-none">
+                <span class="absolute inset-0"></span>
+                {{ feature.name }}
+              </button>
+            </Feature>
+          </Tab>
         </TabList>
         <TabPanels class="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
           <div class="-mx-5 flex">

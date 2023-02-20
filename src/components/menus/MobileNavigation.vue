@@ -1,7 +1,7 @@
 <template>
   <Popover v-slot="{ open }">
     <PopoverButton
-      class="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+      class="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)] :focus:outline-none"
       aria-label="Toggle Navigation">
       <IconsMobileNav :open="open" aria-hidden="true"></IconsMobileNav>
     </PopoverButton>
