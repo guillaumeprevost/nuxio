@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 const metaTitle = 'Agence de dev Nuxio : votre site, e-commerce ou SaaS sur-mesure';
-const metaDescription = 'Agence de développement Nuxio : céation de sites web, e-commerce, SaaS sur-mesure, conception MVP, audit et refontes de sites'
+const metaDescription = 'Agence de développement Nuxio : céation de sites web, e-commerce, SaaS sur-mesure, conception MVP, audit et refontes de sites. Agence de dev à Toulouse.'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({

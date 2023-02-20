@@ -19,7 +19,9 @@
           <div class="relative mt-10 pb-10">
             <div class="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6"></div>
             <div class="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <img :src="feature.image" alt="" sizes="52.75rem" class="w-full" />
+              <nuxt-img format="webp" quality="80" :src="feature.image"
+                :alt="`Prestations agence Nuxio ${feature.name}`" 
+                sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw" class="w-full" />
             </div>
           </div>
         </div>
@@ -27,28 +29,25 @@
       
       <TabGroup as="div" :selectedIndex="selectedIndex" @change="changeTab"
         class="hidden lg:block lg:mt-20">
-        <TabList class="grid grid-cols-3 gap-x-8">     
-          <Tab v-for="feature, featureIndex in features" :key="feature.name" 
-            class="[&:not(:focus-visible)] :focus:outline-none">    
-            <Feature :feature="feature" :isActive="featureIndex === selectedIndex" 
-              class="relative text-left">
-              <button class="[&:not(:focus-visible)]:focus:outline-none">
-                <span class="absolute inset-0"></span>
-                {{ feature.name }}
-              </button>
+        <TabList class="grid grid-cols-3 gap-x-8">
+          <Tab as="template" v-slot="{ selected }"
+            v-for="feature in features" :key="feature.name">
+            <Feature :feature="feature" :isActive="selected">
             </Feature>
           </Tab>
         </TabList>
         <TabPanels class="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
           <div class="-mx-5 flex">
             <TabPanel v-for="feature, featureIndex in features" :key="feature.name" static
-              class="px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none"
+              class="px-5 transition duration-500 ease-in-out focus:outline-none"
               :class="featureIndex !== selectedIndex ? 'opacity-60' : ''"
               :style="`transform: translateX(-${selectedIndex * 100}%)`"
               :aria-hidden="featureIndex !== selectedIndex">
               <div class="w-[52.75rem] overflow-hidden rounded-xl bg-white 
-                shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                <img :src="feature.image" alt="" sizes="52.75rem" class="w-full" />
+                shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10 ">
+                <nuxt-img :src="feature.image" format="webp" quality="80" 
+                  :alt="`Prestations agence Nuxio ${feature.name}`" 
+                  sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw" class="w-full" />
               </div>
             </TabPanel>
           </div>

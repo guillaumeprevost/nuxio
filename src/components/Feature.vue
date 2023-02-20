@@ -1,10 +1,13 @@
 <template>
-  <div :class="!isActive ? 'opacity-75 hover:opacity-100' : ''">
+  <div class="relative focus:outline-none" :class="!isActive ? 'opacity-75 hover:opacity-100' : ''">
     <div class="w-9 rounded-lg" :class="isActive ? 'bg-blue-600' : 'bg-slate-500'">
       <component :is="feature.icon"></component>
     </div>
     <h3 class="mt-6 text-sm font-medium" :class="isActive ? 'text-blue-600' : 'text-slate-600'">
-      <slot />
+      <button class="focus:outline-none">
+        <span class="absolute inset-0"></span>
+        {{ feature.name }}
+      </button>
     </h3>
     <p class="mt-2 font-display text-xl text-slate-900">
       {{ feature.summary }}
