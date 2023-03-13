@@ -3,13 +3,14 @@
     <Container>
       <nav class="relative z-50 flex justify-between">
         <div class="flex items-center md:gap-x-12">
-          <nuxt-link :to="'#'" aria-label="Home">
+          <nuxt-link :to="'/#'" aria-label="Home">
             <Logo />
           </nuxt-link>
           <div class="hidden md:flex md:gap-x-6">
-            <MenusNavLink :href="'#services'">Services</MenusNavLink>
+            <MenusNavLink :href="'/#services'">Services</MenusNavLink>
             <!-- <MenusNavLink :href="'#realisation'">Réalisations</MenusNavLink> -->
-            <MenusNavLink :href="'#temoignages'">Témoignages</MenusNavLink>
+            <MenusNavLink :href="'/#temoignages'">Témoignages</MenusNavLink>
+            <MenusNavLink :href="'/contact'">Contact</MenusNavLink>
           </div>
         </div>
         <div class="flex items-center gap-x-5 md:gap-x-8">
@@ -24,6 +25,7 @@
           <div class="-mr-1 md:hidden">
             <MenusMobileNavigation></MenusMobileNavigation>
           </div>
+          <Contacts></Contacts>
         </div>
       </nav>
     </Container>

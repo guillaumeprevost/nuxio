@@ -36,64 +36,6 @@ module.exports = {
         '2xl': '40rem',
       },
     },
-    // fontFamily: {
-    //   'title': ['Quicksand', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-    //   'body': ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-    // },
-    // colors: {
-    //   // Base colors
-    //   transparent: 'transparent',
-    //   current: 'currentColor',
-    //   black: {
-    //     black: "#000000",
-    //     DEFAULT: '#343434',
-    //     light: '#4a4a4a',
-    //   },
-    //   white: '#ffffff',
-    //   background: '#f3f3f3',
-    //   // Theme colors
-    //   gray: {
-    //     darker: '#2E2E2E',
-    //     dark: '#828282',
-    //     DEFAULT: '#BBBBBB',
-    //     light: '#E7E7E7',
-    //     lighter: '#F5F5F5'
-    //   },
-    //   blue: {
-    //     DEFAULT: '#230B94',
-    //     light: '#f4f3fa', // rgba(35, 11, 148, 0.05)
-    //     highlight: '#eae8f5',
-    //   },
-    //   coral: '#FF7A73',
-    //   turquoise: {
-    //     DEFAULT: '#2FB6BC',
-    //     light: '#d5f0f2',
-    //   },
-    //   yellow: {
-    //     // dark: '#f5b432',
-    //     DEFAULT: '#FFD321',
-    //     // light: '#fff5e2'
-    //   },
-    //   // Base 
-    //   green: {
-    //     DEFAULT: '#3fdb93',
-    //     // light: '#87e9bc'
-    //     // lighter: '#eff8f1'
-    //   },
-    //   orange: {
-    //     DEFAULT: '#f36c32',
-    //     // light: '#ffecd4'
-    //   },
-    //   red: {
-    //     DEFAULT: '#f24a37',
-    //     // light: '#ffe2df'
-    //   },
-    //   // 3rd-party colors
-    //   linkedin: '#2867B2',
-    //   facebook: '#4267B2',
-    //   twitter: '#4099FF'
-    // },
-    // extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),

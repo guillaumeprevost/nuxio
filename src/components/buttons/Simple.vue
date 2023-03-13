@@ -1,8 +1,9 @@
 <template>
-  <NuxtLink v-if="href" :href="href" :class="[baseStyle, variantStyle]">
+  <NuxtLink v-if="href" :href="href" :class="[baseStyle, variantStyle]"
+    :target="href.startsWith('http') ? '_blank' : '_self'">
     <slot></slot>
   </NuxtLink>
-  <button v-else>
+  <button v-else :class="[baseStyle, variantStyle]">
     <slot></slot>
   </button>
 </template>

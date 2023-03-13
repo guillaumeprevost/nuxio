@@ -12,9 +12,10 @@
           Vous avez un projet de création de site web ?
         </h2>
         <p class="mt-4 text-lg tracking-tight text-white">
-          Contactez-nous gratuitement pour faire le point sur votre projet avec un expert.
+          Contactez-nous gratuitement pour faire le point sur votre projet avec un expert en 15-30min.
         </p>
-        <ButtonsSimple href="mailto:agencenuxio@gmail.com" color="white" class="mt-10">
+        <ButtonsSimple href="https://calendly.com/nuxio/30min?text_color=0f172a&primary_color=2563eb" 
+          color="white" class="mt-10">
           Discutons de votre projet
         </ButtonsSimple>
       </div>
