@@ -69,7 +69,7 @@ const faqs = [
       des solutions pour l\'améliorer',
     },
     {
-      question: 'Quelles sont les éléments clés pour choisir une agence de développement',
+      question: 'Quels sont les éléments clés pour choisir une agence de développement',
       answer: 'Les compétences clés d’un développeur web incluent la polyvalence, \
       l’autonomie, la capacité d’adaptation et le respect des délais fixés par le client. \
       Ces aptitudes sont essentielles à une agence de développement pour livrer un travail \

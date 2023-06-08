@@ -1,5 +1,5 @@
 <template>
-  <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+  <figure v-if="testimonial" class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
     <IconsQuote class="absolute top-6 left-6 fill-slate-100" />
     <blockquote class="relative">
       <p class="text-lg tracking-tight text-slate-900" v-html="testimonial.content">
@@ -26,7 +26,13 @@
   </figure>  
 </template>
 
-<script setup>
+<script setup lang="ts">
+defineProps({
+  testimonial: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <style lang="sass">

@@ -51,10 +51,10 @@
               </div>
 
               <div class="flex justify-center items-center gap-6 my-6">
-                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                <ButtonsSimple :href="'mailto:agencenuxio@gmail.com'" variant="outline">
+                <!-- <ButtonsSimple :href="'mailto:agencenuxio@gmail.com'" variant="outline">
                   Contactez-nous
-                </ButtonsSimple>
+                </ButtonsSimple> -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
                 <ButtonsMeeting></ButtonsMeeting>
               </div>
             </div>
