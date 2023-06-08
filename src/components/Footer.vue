@@ -9,6 +9,8 @@
             <!-- <MenusNavLink :href="'/#realisation'">Réalisations</MenusNavLink> -->
             <MenusNavLink :href="'/#temoignages'">Témoignages</MenusNavLink>
             <MenusNavLink :href="'/contact'">Contact</MenusNavLink>
+            <MenusNavLink :href="'/legal'">Mentions légales</MenusNavLink>
+            <MenusNavLink :href="'/legal/conditions'">CGU</MenusNavLink>
           </div>
         </nav>
       </div>
